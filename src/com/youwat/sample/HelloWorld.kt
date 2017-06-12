@@ -1,47 +1,21 @@
-package com.youwat.sample;
+package com.youwat.sample
+import com.youwat.example.Rational
+import com.youwat.example.Student
 
-fun max(a: Int = 9, b: Int): Int = if(a < b) b else if(a == b) 0 else a
-fun min(a: Int, b: Int): Int = if(a > b) b else if(a == b) 0 else a
-
-fun double(x: Int) = x + x
+/*
 
 fun main(args: Array<String>) {
-    val name: String = "Taro!"
-    val ifRet: String = if(name == "Taro") "hoge" else "fuga"
-    fun functions(n: Int) = n + 1
-    val hoge = :: functions
-
-
-    println("Hello $ifRet !")
-    println(max(1,6))
-    println(min(1,6))
-    println(hoge(1))
-    val i = arrayOf(1,2,3,4,5)
-    for(x in i) {
-        println(double(x))
-    }
-    Hogehoge().printStr().test()
-    var datac = User(age = 14)
-    var datab = datac.copy(age = 16)
-    println(datab.age)
-    println(datac.age)
-
+    val r1 = Rational(1, 4).plus(Rational(1,2))
+    val r2 = Rational(1, 4).minus(Rational(1,2))
+    println(r1)
+    println(r2)
 }
 
-class Hogehoge(val str : String = "hoge") {
-    fun printStr(): Hogehoge {
-        println(str)
-        return this
-    }
-
-    fun test() {
-        val list = asList(1,2,3)
-    }
-
-    fun <T> asList(vararg ts: T): List<T> {
-        val result =ArrayList<T>()
-        result += ts
-        return result
-    }
+*/
+fun main(args: Array<String>) {
+    val test = Student(name = "hoge", age = 19)
+    //val stu = Student(name = "hoge", age = 19)
+    println(test.clubName)
+    test.clubName = "test"
+    println(test.clubName)
 }
-data class User(val name: String = "hoge", val age: Int)
